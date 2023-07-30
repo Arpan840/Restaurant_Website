@@ -26,16 +26,16 @@ addEventListener('DOMContentLoaded',foodData)
 
 
 addEventListener('input', (e) => {
-    let val = e.target.value.toLowerCase(); // Convert input to lowercase for case-insensitive matching
+    let val = e.target.value.toLowerCase(); 
   
     let filteredFoodItems = foodArr.filter((i) => {
-      // Filter foodArr based on the input value
+      
       return i.name.toLowerCase().includes(val) || i.time.toLowerCase().includes(val);
     });
   
     let foodItems = '';
     filteredFoodItems.map((i, index) => {
-      // Generate HTML for filtered food items
+      
       foodItems += `
         <div class="card" data-index="${index}">
           <img src=${i.imageSrc} class="card-img-top dishes" alt="food">
